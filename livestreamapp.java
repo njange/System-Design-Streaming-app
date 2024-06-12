@@ -41,8 +41,8 @@ public class livestreamapp {
 
         public Frame getFrame(int timestamp) {
             for (int i = 0; i < frames.length; i++) {
-                if (frames[i].timestamp <= timestamp &&
-                frames[i].timestamp + Frame.frameTime > timestamp) {
+                if (frames[i].startTimestamp <= timestamp &&
+                frames[i].endTimestamp + Frame.frameTime > timestamp) {
                     return frames[i];
                 }
         }
