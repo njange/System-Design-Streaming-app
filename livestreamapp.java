@@ -1,7 +1,20 @@
 public class livestreamapp {
     
-}
+    private Database database;
 
+
+    public int seekTime(String userId, String videoId){
+        WatchedVideo watchedVideo = database.getWatchedVideo(userId, videoId);
+
+        return watchedVideo.getSeekTime();
+    }
+}
+    class Database {
+
+        public WatchedVideo getWatchedVideo(String userId, String videoId) {
+            return null;
+        }
+    }
 
     class Video {
 
