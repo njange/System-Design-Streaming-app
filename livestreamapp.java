@@ -9,6 +9,21 @@ public class livestreamapp {
         return watchedVideo.getSeekTime();
     }
 }
+
+    class VideoService {
+        private FileSystem FileSystem;
+
+        public Frame getFrame(String videoId, int timestamp) {
+            Video video = FileSystem.getVideo(videoId);
+            return video.getFrame(timestamp);
+        }
+    }
+
+    class FileSystem {
+        public Video getVideo(String videoId) {
+            return null;
+        }
+    }
     class Database {
 
         public WatchedVideo getWatchedVideo(String userId, String videoId) {
