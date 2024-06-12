@@ -13,7 +13,7 @@ public class livestreamapp {
         public Frame getFrame(int timestamp) {
             for (int i=0; i<frames.length; i++) {
                 if (frames[i].timestamp <= timestamp &&
-                frames[i].timestamp+10 > timestamp) {
+                frames[i].timestamp+frameTime > timestamp) {
                     return frames[i];
                 }
         }
