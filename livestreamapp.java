@@ -2,18 +2,19 @@ public class livestreamapp {
     
 }
 
+
     class Video {
 
-        public static int frameTime = 10;
+        
 
         String id;
         Frame[] frames;
         String jsonMetaData;
 
         public Frame getFrame(int timestamp) {
-            for (int i=0; i<frames.length; i++) {
+            for (int i = 0; i < frames.length; i++) {
                 if (frames[i].timestamp <= timestamp &&
-                frames[i].timestamp+frameTime > timestamp) {
+                frames[i].timestamp + Frame.frameTime > timestamp) {
                     return frames[i];
                 }
         }
@@ -24,10 +25,30 @@ public class livestreamapp {
 
 
     class Frame {
+        public static int frameTime = 10;
+
         byte[] bytes;
-        int timestamp;
+        int startTimestamp;
+        int endTimestamp;
     }
 
     class User {
         String id;
+        String name;
+        String email;
+
+        public String getId(){
+            return id;
+        }
+    }
+
+    class WatchedVideo{
+        String Id;
+        String VideoId;
+        String UserId;
+        int seekTime;
+
+        public int getSeekTime() {
+            return seekTime;
+        }
     }
