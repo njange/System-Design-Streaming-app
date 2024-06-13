@@ -79,5 +79,5 @@ public class livestreamapp {
         public int getSeekTime() {
             return seekTime;
         }
-        
+
     }
